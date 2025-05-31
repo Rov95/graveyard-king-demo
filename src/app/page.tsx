@@ -1,8 +1,12 @@
+import React from 'react';
+import WelcomeScreen from '../app/welcome/WelcomeScreen';
+
+
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1 className="text-4xl font-bold">Welcome to Next.js!</h1>
-      <p className="mt-4 text-lg">This is a simple Next.js application.</p>
-    </main>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+      <h1 className="text-4xl font-bold mb-8">Welcome to Our Application</h1>
+    <WelcomeScreen />
+    </div>
   );
 }
