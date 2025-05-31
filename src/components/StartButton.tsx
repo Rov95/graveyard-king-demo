@@ -1,13 +1,9 @@
 import React from "react";
 
 export default function InfoButton() {
-    const handleClick = () => {
-        alert("This is an info button. Clicked!");
-    };
 
     return (
         <button
-            onClick={handleClick}
             style={{
                 padding: "10px 20px",
                 fontSize: "16px",
@@ -18,7 +14,7 @@ export default function InfoButton() {
                 cursor: "pointer",
             }}
         >
-            Start
+            Start Game
         </button>
     );
 }

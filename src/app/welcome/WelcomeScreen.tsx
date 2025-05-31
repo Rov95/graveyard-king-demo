@@ -1,37 +1,24 @@
 'use client';
 
 import React from 'react';
-import InfoButton from '../../components/InfoButton';
-import StartButton from '../../components/StartButton';
+import Link from 'next/link';
+
+
+import InfoButton from '@/components/InfoButton';
+import StartButton from '@/components/StartButton';
+import Card from '@/components/Card';   
 
 export default function WelcomeScreen() {
     return (
-        <main style={styles.container}>
-            <h1 style={styles.title}>Welcome to the App!</h1>
-            <div style={styles.buttons}>
-                <StartButton />
+        <main className='h-screen flex flex-col items-center justify-center bg-gray-100 p-4 text-white'>
+            <h1 className='text-3xl mb-5'>Welcome to the App!</h1>
+            <Card />
+            <div className='flex gap-6'>
+                <Link href="/table" className="text-blue-500 hover:underline">
+                    <StartButton />
+                </Link>
                 <InfoButton />
             </div>
         </main>
     );
 }
-
-const styles = {
-    container: {
-        height: '100vh',
-        display: 'flex',
-        flexDirection: 'column' as const,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: 'black',
-        color: 'white',
-    },
-    title: {
-        fontSize: '2rem',
-        marginBottom: '20px',
-    },
-    buttons: {
-        display: 'flex',
-        gap: '1.5rem',
-    },
-};
