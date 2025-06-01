@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import WelcomeScreen from "@/app/welcome/WelcomeScreen";
+import Card from "../card/Card";
 
 export default function Table() {
     return (
@@ -10,6 +10,7 @@ export default function Table() {
             <p className="text-xl">Card Grid Area</p>
         </div>
         <div className="col-span-3 text-center mt-4">Your Hand</div>
+            <Card />
         <Link href="/" className="col-span-1 h-64 bg-blue-600 flex items-center justify-center">
             <p className="text-xl">RETUUUURN</p>
         </Link>
