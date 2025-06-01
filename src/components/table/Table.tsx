@@ -1,7 +1,8 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
+import Card from '../card/Card';
 import {
     tableContainerStyle,
     topTextStyle,
@@ -9,13 +10,25 @@ import {
     bottomTextStyle
 } from './TableStyles';
 
-export default function Table() {
+interface TableProps {
+    cardOnTable: boolean;
+}
+
+export default function Table({ cardOnTable }: TableProps) {
+    const [ showCard, setShowCard ] = useState(false);
+
+    useEffect( () => {
+        if (cardOnTable) {
+            setTimeout(() => setShowCard(true), 300);
+        }
+    }, [cardOnTable])
+
     return (
     <div style={tableContainerStyle}>
         <div style={topTextStyle}>Opponent's Hand</div>
 
-        <div style={cardAreaStyle}>
-            {/* <p className="text-xl">Card Grid Area</p> */}
+        <div id='cardArea'style={cardAreaStyle}>
+            {showCard && <Card isInTable={true} />}
         </div>
 
         <div style={bottomTextStyle}>Your Hand</div>

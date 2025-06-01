@@ -1,6 +1,6 @@
 import { CSSProperties } from "react";
 
-export const cardStyle: CSSProperties = {
+export const boardStyle: CSSProperties = {
     height: '100vh',
     width: '100vw',
     backgroundImage: 'url("/graveyard.svg")',

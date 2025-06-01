@@ -4,14 +4,14 @@ export const tableContainerStyle: CSSProperties = {
     display: "grid",
     gridTemplateRows: "1fr 3fr 1fr",
     gridTemplateColumns: "1fr 1fr 1fr",
-    gap: "8px",
-    padding: "20px",
+    gap: "2px",
+    padding: "8px",
     border: "8px solid #b8860b", 
     borderRadius: "24px",
     backgroundColor: "black", 
     boxShadow: "0 8px 16px rgba(0, 0, 0, 0.5)",
-    width: "90%",
-    maxWidth: "900px",
+    width: "70%",
+    maxWidth: "700px",
     margin: "auto",
 };
 
