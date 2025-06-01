@@ -1,20 +1,20 @@
 import React from "react";
 
-export default function InfoButton() {
+import { circularButtonStyles, circularButtonHoverStyles } from "./StartButtonStyles";
+
+export default function StartButton() {
+    const [hover, setHover] = React.useState(false);
 
     return (
         <button
             style={{
-                padding: "10px 20px",
-                fontSize: "16px",
-                backgroundColor: "#007bff",
-                color: "#fff",
-                border: "none",
-                borderRadius: "5px",
-                cursor: "pointer",
+                ...circularButtonStyles,
+                ...(hover ? circularButtonHoverStyles : {}),
             }}
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
         >
-            Start Game
+            Start
         </button>
     );
 }
