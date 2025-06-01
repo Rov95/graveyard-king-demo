@@ -3,7 +3,7 @@ import { CSSProperties } from 'react';
 export const mainContainerStyle: CSSProperties = {
     height: '100vh',
     width: '100vw',
-    backgroundImage: 'url("/graveyard.svg")',
+    backgroundImage: 'url("/sunset.svg")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     display: 'flex',
